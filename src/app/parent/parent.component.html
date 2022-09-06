@@ -1,0 +1,23 @@
+<p>parent works!</p>
+
+<button (click)="mHandler($event)">Add Element to mutable array</button>
+
+<button (click)="iHandler($event)">Add Element to immutable array</button>
+
+
+<div style="display:flex; flex-direction:column;flex-wrap:wrap;justify-content:space-evenly">
+<div>
+    <span>Default change with Mutable Array </span> <br>
+    <app-default [iData]="mutableArray" ></app-default>
+
+    <br>
+    <span>Default change with IMMutable Array </span> <br>
+    <app-default [iData]="immutableArray" ></app-default>
+</div>
+
+<div>
+    <span>OnPush Strategy with mutable array(ie push pop) </span> <br>
+  <app-on-push [iData]="mutableArray"></app-on-push><br>
+  <span>OnPush Strategy with immutable array ie using spread </span> <br>
+  <app-on-push [iData]="immutableArray"></app-on-push>
+</div>
